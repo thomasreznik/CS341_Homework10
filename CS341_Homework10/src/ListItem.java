@@ -32,6 +32,8 @@ public class ListItem implements Comparable<ListItem> {
 		return new ItemIcon(this, diameter);
 	}
 
+	
+	//Compares Val A's which are the first value in the pairs
 	@Override
 	public int compareTo(ListItem o) {
 		return Integer.compare(o.getValA(), valA);

@@ -9,13 +9,14 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 
 public class DataStructsFrame extends JFrame {
-	public DataStructsFrame(String title, int[] numbers, int[] numbers2) {
+	public DataStructsFrame(String title, int[] numbers1, int[] numbers2) {
 		super(title);
 
 		final JPanel panel = new JPanel();
 		panel.setLayout(new BoxLayout(panel, BoxLayout.PAGE_AXIS));
 
-		final ArrayList<ListItem> list = arrayToList(numbers, numbers2);
+		//Creates ArrayList that holds two values
+		final ArrayList<ListItem> list = arrayToList(numbers1, numbers2);
 
 		final ListPanel unorderedList = new ListPanel("Unordered List");
 		unorderedList.setDiameter(75);
@@ -69,25 +70,12 @@ public class DataStructsFrame extends JFrame {
 		System.out.println(list.toString());
 	}
 
-	void printArray(int arr[]) {
-		int n = arr.length;
-		for (int i = 0; i < n; ++i)
-			System.out.print(arr[i] + " ");
-		System.out.println();
-	}
-
-	void printArrayList(ArrayList<ListItem> list) {
-		int n = list.size();
-		for (int i = 0; i < n; ++i)
-			System.out.print(list.get(i).toString());
-		System.out.println();
-	}
-
-	private ArrayList<ListItem> arrayToList(int[] numbers, int[] numbers2) {
+//Adding the pairs of arrays into the arraylist
+	private ArrayList<ListItem> arrayToList(int[] numbers1, int[] numbers2) {
 		ArrayList<ListItem> list = new ArrayList<ListItem>();
 
-		for (int i = 0; i < numbers.length; i++) {
-			ListItem item = new ListItem(numbers[i], numbers2[i]);
+		for (int i = 0; i < numbers1.length; i++) {
+			ListItem item = new ListItem(numbers1[i], numbers2[i]);
 			list.add(item);
 		}
 
