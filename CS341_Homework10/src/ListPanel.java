@@ -31,11 +31,5 @@ public class ListPanel extends JPanel {
 		for (ListItem item : mList)
 			add(new JLabel(item.createIcon(diameter)));
 	}
-	
-	
-	
-	
-	
-	
-	
+
 }

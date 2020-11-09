@@ -15,7 +15,7 @@ public class DataStructsFrame extends JFrame {
 		final JPanel panel = new JPanel();
 		panel.setLayout(new BoxLayout(panel, BoxLayout.PAGE_AXIS));
 
-		//Creates ArrayList that holds two values
+		// Creates ArrayList that holds two values
 		final ArrayList<ListItem> list = arrayToList(numbers1, numbers2);
 
 		final ListPanel unorderedList = new ListPanel("Unordered List");

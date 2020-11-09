@@ -23,7 +23,7 @@ public class ListItem implements Comparable<ListItem> {
 	public int getValA() {
 		return valA;
 	}
-	
+
 	public int getValB() {
 		return valB;
 	}
@@ -32,8 +32,7 @@ public class ListItem implements Comparable<ListItem> {
 		return new ItemIcon(this, diameter);
 	}
 
-	
-	//Compares Val A's which are the first value in the pairs
+	// Compares Val A's which are the first value in the pairs
 	@Override
 	public int compareTo(ListItem o) {
 		return Integer.compare(o.getValA(), valA);
@@ -42,7 +41,7 @@ public class ListItem implements Comparable<ListItem> {
 	public String toString() {
 		return "[" + valA + ", " + valB + "]";
 	}
-	
+
 	public class ItemIcon implements Icon {
 		private final static int DEFAULT_THICKNESS = 5;
 		private final static int DEFAULT_DIAMETER = 50;
@@ -85,7 +84,7 @@ public class ListItem implements Comparable<ListItem> {
 		public int getIconWidth() {
 			return width + 2 * DEFAULT_THICKNESS;
 		}
-		
+
 		public void paintIcon(Component comp, Graphics g, int x, int y) {
 			// get graphics context
 			Graphics2D g2 = (Graphics2D) g;
